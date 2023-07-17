@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 75vh;
+            width: 70vh;
+            border: 1px solid black;
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 40%;
+        }
+        .ui{
+            text-align: center;
+            margin-top: 2vh;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="ui">
+            <h2>Area & Perimeter of Triangle</h2>
+
+            <h4>For Area enter the length of base and height</h4>
+            Length of base: <input type="number" id="base">
+            <br><br>
+            Length of height: <input type="number" id="height">
+            <br>
+            <h4>For Perimeter enter the length of side a,b,c</h4>
+            Length of side a: <input type="number" id="sidea">
+            <br><br>
+            Length of side b: <input type="number" id="sideb">
+            <br><br>
+            Length of side c: <input type="number" id="sidec">
+            <br><br>
+            <b>Result</b>
+            <br><br>
+            <div class="btn">
+                <button onclick="A()" ><b>Area =</b></button>
+                <button onclick="P()"><b>Perimeter =</b></button>
+            </div>
+            <br>
+            Area of Triangle is: <input type="text" id="Area">
+            <br><br>
+            Perimeter of Triangle is: <input type="text" id="Perimeter">
+        </div>
+    </div>
+
+    <script>
+        function A() {
+            var a = parseFloat(document.getElementById("base").value);
+
+            var b = parseFloat(document.getElementById("height").value);
+
+            var c = (0.5*a*b) +" unit sq.";
+
+            document.getElementById("Area").value=c;
+        }
+
+        function P() {
+            var a = parseFloat(document.getElementById("sidea").value);
+
+            var b = parseFloat(document.getElementById("sideb").value);
+
+            var c = parseFloat(document.getElementById("sidec").value);
+
+            var d = (a+b+c) ;
+
+            document.getElementById("Perimeter").value=d;
+        }
+
+
+    </script>
+</body>
+</html>
